@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct z1_app_mvpApp: App {
+    @StateObject private var serviceContainer = ServiceContainer()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(serviceContainer)
         }
     }
 }
